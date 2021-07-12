@@ -17,6 +17,35 @@ Cities.prototype.randomCustomersGenerator = function() {
         this.counter += this.cookiesPerHour[i];
     }
 }
+Cities.prototype.render = function() {
+    let parent = document.getElementById('container');
+    let cityName = document.createElement('h2');
+    parent.appendChild(cityName);
+    cityName.innerText = this.name;
+    let table = document.createElement('table');
+    parent.appendChild(table);
+    let headingRow = document.createElement('tr');
+    table.appendChild(headingRow);
+    let dataRow = document.createElement('tr');
+    table.appendChild(dataRow);
+    for(let i=0;i<14;i++) {
+        let th = document.createElement('th');
+        th.textContent = workingHours[i];
+        headingRow.appendChild(th);
+        let td = document.createElement('td');
+        this.randomCustomersGenerator();
+        td.innerText = this.cookiesPerHour[i];
+        dataRow.appendChild(td);
+        if(i == 13) {
+            let th = document.createElement('th');
+            th.innerText = "Daily Total";
+            headingRow.appendChild(th);
+            let td = document.createElement('td');
+            td.innerText = this.counter;
+            dataRow.appendChild(td);
+        }
+    }
+}
 
 let cities = [
     Seattle = new Cities('Seattle', 23, 65, 0, 6.3, [], []),
@@ -26,21 +55,7 @@ let cities = [
     Lima = new Cities('Lima', 2, 16, 0, 4.6, [], [])
 ];
 
-for(city of cities) {
-    city.randomCustomersGenerator();
-    let parent = document.getElementById('parent');
-    let cityName = document.createElement('h2');
-    cityName.textContent = city.name;
-    let list = document.createElement('ul');
-    for(let i = 0;i<14;i++){
-        let item = document.createElement('li');
-        parent.append(cityName);
-        parent.append(list);
-        list.append(item);
-        item.innerText = `${workingHours[i]}: ${city.cookiesPerHour[i]} cookies`;
-        if(i == 13){
-            list.append(item);
-            item.innerText = `Total: ${city.counter} cookies`;
-        }
-    }
-}
+cities.forEach(city => {
+    city.render();
+});
+
