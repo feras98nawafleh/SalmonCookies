@@ -84,7 +84,7 @@ let cities = [
 
 for(city of cities) {
     city.randomCustomersGenerator();
-    document.write(`<h2>Seattle</h2>`);
+    document.write(`<h2>${city.name}</h2>`);
     for(let i = 0 ; i < 14 ; i++) {
         document.write(`<li>${workingHours[i]}: ${city.cookiesPerHour[i]} cookies</li>`);
         if(i == 13) {
