@@ -26,8 +26,8 @@ let cities = [
         cookiesPerHour: [],
         randomCustomersGenerator:function() {
             for(let i=0;i<14;i++) {
-                this.randomCustomersPerHour[i] = Math.floor(Math.random() * (this.max - this.min) + this.min);
-                this.cookiesPerHour[i] = Math.floor(this.avgCookiePerSale * this.randomCustomersPerHour[i]);
+                this.randomCustomersPerHour.push(Math.floor(Math.random() * (this.max - this.min) + this.min));
+                this.cookiesPerHour.push(Math.floor(this.avgCookiePerSale * this.randomCustomersPerHour[i]));
                 this.counter += this.cookiesPerHour[i];
             }
         },
@@ -42,8 +42,8 @@ let cities = [
         cookiesPerHour: [],
         randomCustomersGenerator:function() {
             for(let i=0;i<14;i++) {
-                this.randomCustomersPerHour[i] = Math.floor(Math.random() * (this.max - this.min) + this.min);
-                this.cookiesPerHour[i] = Math.floor(this.avgCookiePerSale * this.randomCustomersPerHour[i]);
+                this.randomCustomersPerHour.push(Math.floor(Math.random() * (this.max - this.min) + this.min));
+                this.cookiesPerHour.push(Math.floor(this.avgCookiePerSale * this.randomCustomersPerHour[i]));
                 this.counter += this.cookiesPerHour[i];
             }
         },
@@ -58,8 +58,8 @@ let cities = [
         cookiesPerHour: [],
         randomCustomersGenerator:function() {
             for(let i=0;i<14;i++) {
-                this.randomCustomersPerHour[i] = Math.floor(Math.random() * (this.max - this.min) + this.min);
-                this.cookiesPerHour[i] = Math.floor(this.avgCookiePerSale * this.randomCustomersPerHour[i]);
+                this.randomCustomersPerHour.push(Math.floor(Math.random() * (this.max - this.min) + this.min));
+                this.cookiesPerHour.push(Math.floor(this.avgCookiePerSale * this.randomCustomersPerHour[i]));
                 this.counter += this.cookiesPerHour[i];
             }
         },
@@ -74,8 +74,8 @@ let cities = [
         cookiesPerHour: [],
         randomCustomersGenerator:function() {
             for(let i=0;i<14;i++) {
-                this.randomCustomersPerHour[i] = Math.floor(Math.random() * (this.max - this.min) + this.min);
-                this.cookiesPerHour[i] = Math.floor(this.avgCookiePerSale * this.randomCustomersPerHour[i]);
+                this.randomCustomersPerHour.push(Math.floor(Math.random() * (this.max - this.min) + this.min));
+                this.cookiesPerHour.push(Math.floor(this.avgCookiePerSale * this.randomCustomersPerHour[i]));
                 this.counter += this.cookiesPerHour[i];
             }
         },
