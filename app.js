@@ -17,13 +17,10 @@ City.prototype.randomCustomersGenerator = function() {
         this.counter += this.cookiesPerHour[i];
     }
 }
-City.prototype.render = function() {
-    let parent = document.getElementById('container');
-    let cityName = document.createElement('h2');
-    parent.appendChild(cityName);
-    cityName.innerText = this.name;
-    let table = document.createElement('table');
-    parent.appendChild(table);
+let parent = document.getElementById('container');
+let table = document.createElement('table');
+parent.appendChild(table);
+renderHeader = () => {
     let headingRow = document.createElement('tr');
     table.appendChild(headingRow);
     let th = document.createElement('th');
@@ -40,7 +37,7 @@ City.prototype.render = function() {
         }
     }
 }
-Cities.prototype.renderBody = function() {
+City.prototype.renderBody = function() {
         let dataRow = document.createElement('tr');
         table.appendChild(dataRow);
         let td = document.createElement('td');
@@ -92,7 +89,7 @@ let cities = [
     Lima = new City('Lima', 2, 16, 0, 4.6, [], [])
 ];
 
-renderHead();
+renderHeader();
 cities.forEach(city => {
     city.renderBody();
 });
