@@ -11,11 +11,12 @@ function City(name, min, max, counter, avgCookiePerSale, randomCustomersPerHour,
 }
 
 City.prototype.randomCustomersGenerator = function() {
-    for(let i=0;i<14;i++) {
-        this.randomCustomersPerHour.push(Math.floor(Math.random() * (this.max - this.min) + this.min));
+    for(let i=0;i<workingHours.length;i++) {
+        this.randomCustomersPerHour.push(Math.floor(Math.random() * (this.max - this.min + 1)) + this.min);
         this.cookiesPerHour.push(Math.floor(this.avgCookiePerSale * this.randomCustomersPerHour[i]));
         this.counter += this.cookiesPerHour[i];
     }
+    console.log("Counter = " + this.counter);
 }
 let parent = document.getElementById('container');
 let table = document.createElement('table');
@@ -38,6 +39,7 @@ renderHeader = () => {
     }
 }
 City.prototype.renderBody = function() {
+        this.randomCustomersGenerator();
         let dataRow = document.createElement('tr');
         table.appendChild(dataRow);
         let td = document.createElement('td');
@@ -45,7 +47,6 @@ City.prototype.renderBody = function() {
         dataRow.appendChild(td);
         for(let i=0;i<workingHours.length;i++) {
             let td = document.createElement('td');
-            this.randomCustomersGenerator();
             td.innerText = this.cookiesPerHour[i];
             dataRow.appendChild(td);
             if(i == 13) {
@@ -55,9 +56,9 @@ City.prototype.renderBody = function() {
             }
         }
 }
+let totalCookiesEachHour = 0;
+let totalCookiesAllTime = 0;
 renderFooter = () => {
-    let totalCookiesEachHour = 0;
-    let totalCookiesAllTime = 0;
     let tfoot = document.createElement('tfoot');
     table.appendChild(tfoot);
     let tr = document.createElement('tr');
@@ -66,6 +67,8 @@ renderFooter = () => {
     td.innerText = "Totals";
     tr.appendChild(td);
     for(let i=0;i<workingHours.length;i++) {
+        totalCookiesEachHour = 0;
+        totalCookiesAllTime = 0;
     let td = document.createElement('td');
     for(let j=0;j<cities.length;j++) {
         totalCookiesEachHour+=cities[j].cookiesPerHour[i];
