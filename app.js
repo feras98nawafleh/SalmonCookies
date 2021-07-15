@@ -22,9 +22,9 @@ let form = document.getElementById("form");
 let submitForm = function(e) {
     e.preventDefault();
     let city = e.target.city.value;
-    let min = e.target.min.value;
-    let max = e.target.max.value;
-    let avg = e.target.avg.value;
+    let min = parseInt(e.target.min.value);
+    let max = parseInt(e.target.max.value);
+    let avg = parseInt(e.target.avg.value);
     let newStore = new City(city, min, max, avg, 0, [], []);
     console.log(newStore);
     newStore.renderBody();
