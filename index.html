@@ -7,14 +7,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salmon Cookies</title>
     <style>
-        h1 {
-            text-align: center;
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200&display=swap');
+
+        html {
+            margin: 20px;
+        }
+
+        body {
+            background-color: #A67B3D;
+        }
+
+        nav {
+            font-family: 'Tajawal', sans-serif;
             background-color: orange;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        li {
+            margin-right: 10px;
+            font-size: xx-large;
+        }
+
+        h1 {
+            font-size: xx-large;
+            text-align: center;
+            color: black;
         }
 
         h2 {
             text-align: center;
-            background-color: orangered;
+            background-color: rgb(90, 30, 8);
+            color: orangered;
+        }
+
+        p {
+            color: orange;
         }
 
         .fishes img {
@@ -25,8 +60,6 @@
 
         .info p {
             margin: 50px;
-            color: orangered;
-            background-color: black;
             font-size: x-large;
             text-align: center;
             font-weight: 100px;
@@ -44,6 +77,7 @@
             background-color: chocolate;
             margin: 50px;
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
             align-items: center;
             font-size: x-large;
@@ -66,13 +100,32 @@
 
         a {
             text-decoration: none;
-            color: red;
+            color: black;
+            font-weight: bolder;
+        }
+
+        h2,
+        p {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        iframe {
+            width: 200px;
+            height: 200px;
+            justify-content: space-between;
         }
     </style>
 </head>
 
 <body>
-    <h1>Salmon Cookies</h1>
+    <nav>
+        <h1>Salmon Cookies</h1>
+        <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">twitter</a></li>
+            <li><a href="#">instagram</a></li>
+        </ul>
+    </nav>
     <div class="fishes">
         <h2>Take a look at the freshest fish in town</h2>
         <img src="https://github.com/LTUC/amman-201d33/blob/main/class-08/lab-b/assets/chinook.jpg?raw=true" alt="">
@@ -89,18 +142,36 @@
         <img src="https://github.com/LTUC/amman-201d33/blob/main/class-08/lab-b/assets/shirt.jpg?raw=true" alt="">
     </div>
     <div class="locations">
-        <p>you can find us at:
-            <li>Seattle</li>
-            <li>Tokyo</li>
-            <li>Dubai</li>
-            <li>Paris</li>
-            <li>Lima</li>
-        </p>
+        <p>you can find us at:<p>
+        <div class="iframes">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96619.90821816427!2d-122.28436347110322!3d47.60757110905534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490102c93e83355%3A0x102565466944d59a!2z2LPZitin2KrZhNiMINmI2KfYtNmG2LfZhtiMINin2YTZiNmE2KfZitin2Kog2KfZhNmF2KrYrdiv2Kk!5e0!3m2!1sar!2sjo!4v1627057936978!5m2!1sar!2sjo"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1662934.3483409022!2d140.89111741927977!3d35.50628973617667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x605d1b87f02e57e7%3A0x2e01618b22571b89!2z2LfZiNmD2YrZiNiMINin2YTZitin2KjYp9mG!5e0!3m2!1sar!2sjo!4v1627063140174!5m2!1sar!2sjo"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462560.3011847609!2d55.50794661976002!3d25.07638147161041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2z2K_YqNmKIC0g2KfZhNil2YXYp9ix2KfYqiDYp9mE2LnYsdio2YrYqSDYp9mE2YXYqtit2K_YqQ!5e0!3m2!1sar!2sjo!4v1627063221908!5m2!1sar!2sjo"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.7576939844!2d2.4170999986977444!3d48.858950681346705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2z2KjYsdisINil2YrZgdmR2YQ!5e0!3m2!1sar!2sjo!4v1627063186125!5m2!1sar!2sjo"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499488.8828510277!2d-76.70757728250977!3d-12.025826975281058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c5f619ee3ec7%3A0x14206cb9cc452e4a!2z2YTZitmF2KfYjCDYqNmK2LHZiA!5e0!3m2!1sar!2sjo!4v1627063245940!5m2!1sar!2sjo"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
     </div>
     <div class="hours-open">
         <p>We are glad to serve you from 6am to 7pm</p>
         <br>
-        <p>mobile: 0790951509 E-mail: fero.nofal@gmail.com</p>
+        <p>
+            mobile: 0790951509
+            E-mail:
+            <a href="mailto:fero.nofal@gmail.com?subject = Feedback&body = Message">
+                fero.nofal@gmail.com
+            </a>
+        </p>
+
     </div>
     <button><a href="sales.html">Check Our Sales Page</a></button>
 </body>
