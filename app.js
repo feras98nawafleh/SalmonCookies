@@ -26,7 +26,6 @@ let submitForm = function(e) {
     let max = parseInt(e.target.max.value);
     let avg = parseInt(e.target.avg.value);
     let newStore = new City(city, min, max, avg, 0, [], []);
-    console.log(newStore);
     newStore.renderBody();
     tfoot.textContent = '';
     renderFooter();
@@ -92,7 +91,6 @@ renderFooter = () => {
         totalCookiesAllTime = 0;
     let td = document.createElement('td');
     for(let j=0;j<cities.length;j++) {
-        console.log(cities);
         totalCookiesEachHour+=cities[j].cookiesPerHour[i];
         td.innerText = totalCookiesEachHour;
         tr.appendChild(td);
